@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <title>Formulário de registro</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <h1>Formulário de Registro</h1>
+  <p>Por favor, preencha
+    este formulário com as informações necessárias</p>
+  <form action="https://register-demo.freecodecamp.org" method="post">
+    <fieldset>
+      <label>Digite seu primeiro nome: <input required id="firstname" type="text"></input></label>
+      <label>Digite seu sobrenome: <input required id="lastname" type="text"></input></label>
+      <label>Digite seu email: <input required minlength="8" id="email" type="email"></input></label>
+      <label>Crie uma nova senha: <input required pattern="[a-z0-5]{8,}" id="senha" type="password"></input></label>
+    </fieldset>
+    <fieldset>
+      <label for="personal-account"><input class="inline" id="personal-account" name="account-type" type="radio" /> Conta
+        Pessoal</label>
+      <label for="business-account"><input class="inline" id="business-account" name="account-type" type="radio" /> Conta Profissional
+      </label>
+      <label for="terms-and-conditions"><input class="inline" id="terms-and-conditions" type="checkbox" required>
+        Eu aceito os <a href="https://www.freecodecamp.org/news/term
+            s-of-service/" target="_blank" > termos e condições</a> </label>
+    </fieldset>
+    <fieldset>
+      <label for="foto">Carregue uma foto de perfil:
+        <input id="foto" type="file">
+      </label>
+      <label for="idade">Coloque sua idade: 
+        <input id="idade" type="number" min="13" max="120"></label>
+      <label for="refer">Como você ouviu sobre nós?
+        <select id="refer">
+          <option value="">Selecione uma opção</option>
+          <option value="1">freeCodeCamp News</option>
+          <option value="2">freeCodeCamp YouTube</option>
+          <option value="3">freeCodeCamp Forum</option>
+          <option value="4">Outro</option>
+        </select>
+      </label>
+      <label for="bio">Escreva uma bio:
+      <textarea placeholder="Eu gosto de programar na praia..." 
+      id="bio" rows="3" cols="30"></textarea></label>
+    </fieldset>
+    <input class="botaoenviar" type="submit" value="Enviar">
+  </form>
+  <!-- O atributo method especifica como enviar
+         dados de formulário para o URL especificado
+         no atributo action. Os dados do formulário
+         podem ser enviados através de uma solicitação
+         GET como parâmetros de URL (com method="get")
+         ou através de uma solicitação POST como dados 
+         no corpo da solicitação (com method="post"). -->
+</body>
+
+</html>
+
+<!-- input com atributo type de valor 'file' permite 
+fazer upload de arquivos para o site. -->
+
+<!-- O elemento "textarea" age como um elemento input 
+  do tipo text, mas vem com o benefício adicional de 
+  poder receber texto em várias linhas e um número inicial 
+  de linhas e colunas. -->
+
+  <!-- Para dar uma ideia do que colocar na bio, 
+    o atributo placeholder é usado. O placeholder aceita um 
+    valor de texto, que é exibido até que o usuário comece a 
+    digitar. -->
